@@ -1,7 +1,7 @@
 /* STUDENT HUBS */
 %base {
   %hubContainer {
-    background: rgba(0, 0, 0, calc(#{cv('bg.app.shading')} * 0.5));
+    background: rgba(0, 0, 0, calc($bg-shading * 0.5));
   }
 }
 
@@ -9,11 +9,11 @@
 %hubCategoryItem {
   &%hubCategoryItemSelected {
     %hubCategoryItemLayout {
-      background-color: var(--main-color);
+      background-color: $main-color;
     }
   }
 }
-%hubCategoryItemIcon>svg>path {
+%hubCategoryItemIcon > svg > path {
   fill: var(--interactive-active);
 }
 
@@ -28,8 +28,8 @@
     background-color: hsla(0, 0%, 0%, 0.6);
   }
   %hubCardIconMask {
-    background-color: rgba(0, 0, 0, .4);
-    transition: all .15s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.15s ease-in-out;
   }
   %hubCardIcon {
     background-color: $main-color;
@@ -48,25 +48,25 @@
     box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.09);
     &:focus-within {
       border: none;
-      box-shadow: 0 0 2px 2px var(--main-color);
+      box-shadow: 0 0 2px 2px $main-color;
     }
     %input {
       border: none;
       box-shadow: none;
     }
     %searchBoxInput {
-      color: var(--text-normal);
+      color: $text-normal;
       &::placeholder {
         color: hsla(0, 0%, 100%, 0.3);
       }
     }
     %searchBoxIconSearch {
-      color: var(--main-color);
+      color: $main-color;
     }
     %searchBoxCloseIcon {
-      color: var(--main-color);
+      color: $main-color;
       &:hover {
-        color: var(--hover-color);
+        color: $hover-color;
       }
     }
   }
@@ -78,22 +78,22 @@
     box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.09);
     &:focus-within {
       border: none;
-      box-shadow: 0 0 2px 2px var(--main-color);
+      box-shadow: 0 0 2px 2px $main-color;
     }
     %input {
       border: none;
       box-shadow: none;
     }
     %searchBoxInput {
-      color: var(--text-normal);
+      color: $text-normal;
       &::placeholder {
         color: hsla(0, 0%, 100%, 0.3);
       }
     }
     %searchBoxCloseIcon {
-      color: var(--main-color);
+      color: $main-color;
       &:hover {
-        color: var(--hover-color);
+        color: $hover-color;
       }
     }
   }

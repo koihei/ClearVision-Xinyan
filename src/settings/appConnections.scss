@@ -12,33 +12,33 @@ $colours: (
   'YouTube': #ff0000,
 );
 
-.connection-YOVI9j {
-  @each $i,
-  $u in $colours {
-    &:has(.connectionIcon-1iZ6F_[alt*='#{$i}']) {
-      background-color: rgba($u, 0.6);
+%connections {
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+%connectionsHeader {
+  background-color: transparent;
+}
+
+%connections {
+  @each $i, $u in $colours {
+    &:has(%connectionsIcon[alt*='#{$i}']) {
+      background-color: rgba($u, 0.5);
     }
   }
 }
-.connectionHeader-Ixbb1s {
-  @each $i,
-  $u in $colours {
-    &:has(.connectionIcon-1iZ6F_[alt*='#{$i}']) {
+%connectionsHeader {
+  @each $i, $u in $colours {
+    &:has(%connectionsIcon[alt*='#{$i}']) {
       background-color: rgba($u, 0.2);
     }
   }
 }
-.connectionAccountLabel-28GEPk {
+%connectionsAccountLabel {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+%connectionsDelete {
   color: hsla(0, 0%, 100%, 0.7);
 }
-.connectionDelete-3YgMVq {
-  color: hsla(0, 0%, 100%, 0.7);
-}
-
-.integrationsWrapper-1V-5L9 {
-  background-color: cv('const:colors.twitch-purple');
-  border-radius: 0 0 8px 8px;
-}
-.integration-1qC-fv {
-  background-color: cv('const:colors.twitch-purple');
+%connectionsMetadataContainer {
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
